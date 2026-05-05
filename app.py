@@ -3,7 +3,7 @@ import pandas as pd
 
 st.set_page_config(page_title="Dashboard Multi-Bases", layout="wide")
 
-st.title("📊 Aplicação de Análise de Dados")
+st.title("Aplicação de Análise de Dados")
 
 # =============================
 # Função para normalizar colunas
@@ -42,7 +42,7 @@ option = st.sidebar.selectbox(
 # SPACE X
 # =============================
 if option == "SpaceX Launches":
-    st.header("🚀 SpaceX Launch Data")
+    st.header("SpaceX Launch Data")
 
     df = spacex.copy()
 
@@ -79,7 +79,7 @@ if option == "SpaceX Launches":
 # VIDEO GAMES
 # =============================
 elif option == "Video Games Sales":
-    st.header("🎮 Video Game Sales")
+    st.header("Video Game Sales")
 
     df = games.copy()
 
@@ -121,7 +121,7 @@ elif option == "Video Games Sales":
 # CARROS
 # =============================
 elif option == "Carros":
-    st.header("🚗 Carros - Preço")
+    st.header("Carros - Preço")
 
     df = cars.copy()
 
@@ -189,7 +189,7 @@ elif option == "Carros":
         )
         df = df[(df[price_col] >= price_range[0]) & (df[price_col] <= price_range[1])]
 
-        st.metric("💰 Preço médio", f"${int(df[price_col].mean())}")
+        st.metric("Preço médio", f"${int(df[price_col].mean())}")
 
     # Gráfico
     if brand_col:
