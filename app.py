@@ -188,6 +188,6 @@ elif option == "Carros":
             (int(df[price_col].min()), int(df[price_col].max()))
         )
         df = df[(df[price_col] >= price_range[0]) & (df[price_col] <= price_range[1])]
-
+    st.dataframe(df)
     st.write("Total de registros:", len(df))
 
