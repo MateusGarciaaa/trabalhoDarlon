@@ -191,10 +191,3 @@ elif option == "Carros":
 
         st.metric("Preço médio", f"${int(df[price_col].mean())}")
 
-    # Gráfico
-    if brand_col:
-        st.subheader("Distribuição por marca")
-        st.bar_chart(df[brand_col].value_counts())
-
-    st.dataframe(df)
-    st.write("Total de registros:", len(df))
