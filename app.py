@@ -189,5 +189,5 @@ elif option == "Carros":
         )
         df = df[(df[price_col] >= price_range[0]) & (df[price_col] <= price_range[1])]
 
-        st.metric("Preço médio", f"${int(df[price_col].mean())}")
+    st.write("Total de registros:", len(df))
 
